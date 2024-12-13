@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couponic Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+
+
+        /* Hero Section Animation */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: url('Image/White and Black Simple Lined White UI Blank Prototypes Website.png') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+        }
+
+        .animated-image {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Navbar Dropdown */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            background-color: #f8f9fa;
+            list-style-type: none;
+            padding: 10px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            margin: 0;
+            padding: 5px 15px;
+        }
+
+        nav ul li ul li a {
+            color: #333;
+        }
+
+        nav ul li ul li a:hover {
+            color: #007bff;
+        }
+
+        .section {
+            padding: 20px 0;
+            background-color: #f4f4f4;
+            margin-top: 20px;
+        }
+
+        .section h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .deal-card {
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .deal-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .deal-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .deal-card h4 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            position: relative;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #007bff;
+            padding: 10px;
+            display: block;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        nav ul li ul li {
+            margin: 0;
+        }
+        nav ul li ul li a {
+            padding: 10px 20px;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CouponKing</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Categories</a>
+                        <ul>
+                            <li><a href="#">Fashion</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <li><a href="#">Groceries</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Top Stores</a>
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Flipkart</a></li>
+                            <li><a href="#">Myntra</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Best Offers</a>
+                        <ul>
+                            <li><a href="#">Travel</a></li>
+                            <li><a href="#">Food</a></li>
+                            <li><a href="#">Health</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Collections</a>
+                        <ul>
+                            <li><a href="#">Festive Deals</a></li>
+                            <li><a href="#">Clearance Sales</a></li>
+                            <li><a href="#">Exclusive Offers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Share & Earn</a>
+                        <ul>
+                            <li><a href="#">Refer Friends</a></li>
+                            <li><a href="#">Affiliate Program</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+
+
+    <!-- Header Section -->
+    <!-- <header>
+        <div class="container">
+            <h1>Couponic Deals</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Categories</a>
+                        <ul>
+                            <li><a href="#">Fashion</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <li><a href="#">Groceries</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Top Stores</a>
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Flipkart</a></li>
+                            <li><a href="#">Myntra</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Best Offers</a>
+                        <ul>
+                            <li><a href="#">Travel</a></li>
+                            <li><a href="#">Food</a></li>
+                            <li><a href="#">Health</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Collections</a>
+                        <ul>
+                            <li><a href="#">Festive Deals</a></li>
+                            <li><a href="#">Clearance Sales</a></li>
+                            <li><a href="#">Exclusive Offers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Share & Earn</a>
+                        <ul>
+                            <li><a href="#">Refer Friends</a></li>
+                            <li><a href="#">Affiliate Program</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Find the Best Deals and Offers</h2>
+                <p>Save money with exclusive coupons and discounts!</p>
+                <!-- <img src="https://via.placeholder.com/200" alt="Hero Image" class="animated-image"> -->
+            </div>
+        </section>
+
+        <section class="section">
+            <h3>Top Stores</h3>
+            <div class="grid-container">
+                <div class="deal-card">
+                    <img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/stores/web/e3f0cb0aec65ed22f674fd634650db38/amazon-logo-large.jpg?41978" alt="Store 1">
+                    <h4>Amazon 10% Off</h4>
+                    <p>Get flat 10% off on all products. <a href="amazon.html">Shop Now</a></p>
+                </div>
+                <!-- Add 14 more deal cards with different images and descriptions -->
+                <!-- Dummy placeholders used for now -->
+                <div class="deal-card"><img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/stores/web/4022b70285e468ff98d01073c52038b8/flipkart-logo-large.jpg?126153" alt="Store 2"><h4>Flipkart</h4><p>Save 15% on gadgets. <a href="flipkart.html">Shop Now</a></p></div>
+                <div class="deal-card"><img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/stores/web/4763d1d29415df742a808c52e765a098/myntra-logo-large.jpg?506948" alt="Store 3"><h4>Myntra</h4><p>Flat 20% off on fashion. <a href="#">Shop Now</a></p></div>
+                <div class="deal-card"><img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/stores/web/f6fd7521cba029e92f8f3b34aa45179c/swiggy-logo-large.jpg?323587" alt="Store 4"><h4>Swiggy</h4><p>50% off on first order. <a href="#">Shop Now</a></p></div>
+                <div class="deal-card"><img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/stores/web/a73abb6a060197a185b6bcf36b673dcd/bigbasket-logo-large.jpg?586183" alt="Store 5"><h4>BigBasket</h4><p>Save 25% on groceries. <a href="#">Shop Now</a></p></div>
+                <div class="deal-card"><img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/stores/web/40d165638a27d7c4b816120edfa7cb42/hostinger-logo-large.png?811092" alt="Store 6"><h4>Hostinger</h4><p>Flat 41.3% Cashback. <a href="#">Shop Now</a></p></div>
+                <div class="deal-card"><img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/stores/web/5172ef198b1eb8bd9fbfa3d1afc37844/cleartrip-logo-large.png?490144" alt="Store 7"><h4>Cleartrip</h4><p>Upto Rs.220 Cashback. <a href="#">Shop Now</a></p></div>
+                <div class="deal-card"><img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/stores/web/23998f55b9f1afd8abb9ae29e2a111e7/nykaa-logo-large.jpg?723189" alt="Store 8"><h4>Nykaa</h4><p>Upto 6.3% Cashback. <a href="#">Shop Now</a></p></div>
+                <div class="deal-card"><img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/stores/web/09415a91e17abbbd0aa55f6648509253/puma-logo-large.jpg?861627" alt="Store 9"><h4>Puma</h4><p>Flat 6% Cashback. <a href="#">Shop Now</a></p></div>
+                <div class="deal-card"><img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/stores/web/9ffe4a7a7970e2d853ea7f9dbce75627/ajio-logo-large.jpg?294922" alt="Store 10"><h4>AJIO</h4><p>Upto 8% Cashback. <a href="#">Shop Now</a></p></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3>Trending Categories</h3>
+            <div class="grid-container">
+                <div class="deal-card">
+                    <img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/coupon-categories/mweb/8ea543dc59b0ac91dc0b133e9bf889e4/mobiles-and-tablets-icon-large.png?197367" alt="Category 1">
+                    <h4>Electronics</h4>
+                    <p>Up to 30% off on gadgets. <a href="#">Explore Now</a></p>
+                </div>
+                <!-- Add 14 more deal cards with different images and descriptions -->
+                <div class="deal-card"><img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/coupon-categories/mweb/cce80a72bc3481d723c38cccf592d45a/fashion-icon-large.png?467897" alt="Category 2"><h4>Fashion</h4><p>Flat 50% off on clothing. <a href
+                    ="#">Explore Now</a></p></div>
+                <div class="deal-card"><img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/coupon-categories/mweb/2fc8b475c69d8e6248bf5a3aef2c9388/beauty-and-health-icon-large.png?416997" alt="Category 3"><h4>Beauty & Health</h4><p>Up to 20% off on groceries. <a href
+                    ="#">Explore Now</a></p></div>  
+                <div class="deal-card"><img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/coupon-categories/mweb/f03d845e0abf31e72409cf7c5c704a2e/travel-icon-large.png?841501" alt="Category 4"><h4>Travel</h4><p>Flat 10% off on health products. <a href
+                    ="#">Explore Now</a></p></div>
+                <div class="deal-card"><img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/coupon-categories/mweb/5f735b1ef3026be39a6d1c66e7fe4a19/food-and-dining-icon-large.png?912441" alt="Category 5"><h4>Food & Dining</h4><p>Flat 20% off on home & kitchen. <a href
+
+                

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Coupons</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .coupon {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .coupon:hover {
+            transform: scale(1.03);
+        }
+
+        .coupon .details {
+            flex: 3;
+        }
+
+        .coupon .details h4 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .coupon .details p {
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .coupon .copy {
+            flex: 1;
+            text-align: center;
+        }
+
+        .coupon .copy button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .coupon .copy button:hover {
+            background-color: #0056b3;
+        }
+
+        .coupon .copy .copied-message {
+            color: green;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+    <script>
+        function copyCouponCode(button, couponCode) {
+            navigator.clipboard.writeText(couponCode).then(() => {
+                const copiedMessage = button.nextElementSibling;
+                copiedMessage.style.display = 'block';
+                setTimeout(() => {
+                    copiedMessage.style.display = 'none';
+                }, 2000);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Amazon Coupons and Offers</h1>
+
+        <!-- Coupon Example -->
+        <div class="coupon">
+            <div class="details">
+                <h4>10% Off on Electronics</h4>
+                <p>Use this coupon to get 10% off on electronics on Amazon. Valid until 31st Dec 2024.</p>
+            </div>
+            <div class="copy">
+                <button onclick="copyCouponCode(this, 'ELECTRO10')">Copy Code</button>
+                <div class="copied-message">Code Copied!</div>
+            </div>
+        </div>
+
+        <div class="coupon">
+            <div class="details">
+                <h4>Flat 20% Cashback</h4>
+                <p>Get flat 20% cashback on Amazon purchases with this coupon. Limited time offer.</p>
+            </div>
+            <div class="copy">
+                <button onclick="copyCouponCode(this, 'CASHBACK20')">Copy Code</button>
+                <div class="copied-message">Code Copied!</div>
+            </div>
+        </div>
+
+        <div class="coupon">
+            <div class="details">
+                <h4>Buy 1 Get 1 Free</h4>
+                <p>Use this coupon to get Buy 1 Get 1 Free on selected categories. Hurry up!</p>
+            </div>
+            <div class="copy">
+                <button onclick="copyCouponCode(this, 'BOGOFREE')">Copy Code</button>
+                <div class="copied-message">Code Copied!</div>
+            </div>
+        </div>
+
+        <div class="coupon">
+            <div class="details">
+                <h4>Extra 5% on Groceries</h4>
+                <p>Save extra 5% on all grocery purchases above Rs. 1000. Valid for a week.</p>
+            </div>
+            <div class="copy">
+                <button onclick="copyCouponCode(this, 'GROCERY5')">Copy Code</button>
+                <div class="copied-message">Code Copied!</div>
+            </div>
+        </div>
+
+        <div class="coupon">
+            <div class="details">
+                <h4>Free Shipping on Orders Over Rs. 500</h4>
+                <p>Enjoy free shipping on orders above Rs. 500. No coupon required!</p>
+            </div>
+            <div class="copy">
+                <button onclick="copyCouponCode(this, 'FREESHIP')">Copy Code</button>
+                <div class="copied-message">Code Copied!</div>
+            </div>
+        </div>
+
+        <div class="coupon">
+            <div class="details">
+                <h4>30% Off on Home Appliances</h4>
+                <p>Get 30% off on selected home appliances. Limited period offer.</p>
+            </div>
+            <div class="copy">
+                <button onclick="copyCouponCode(this, 'HOME30')">Copy Code</button>
+                <div class="copied-message">Code Copied!</div>
+            </div>
+        </div>
+
+        <div class="coupon">
+            <div class="details">
+                <h4>Exclusive Prime Discount</h4>
+                <p>Amazon Prime members get an additional 15% off on selected items.</p>
+            </div>
+            <div class="copy">
+                <button onclick="copyCouponCode(this, 'PRIME15')">Copy Code</button>
+                <div class="copied-message">Code Copied!</div>
+            </div>
+        </div>
+
+        <div class="coupon">
+            <div class="details">
+                <h4>Books at 40% Off</h4>
+                <p>Buy books with a flat 40% discount. Offer valid for a limited time.</p>
+            </div>
+            <div class="copy">
+                <button onclick="copyCouponCode(this, 'BOOKS40')">Copy Code</button>
+                <div class="copied-message">Code Copied!</div>
+            </div>
+        </div>
+
+        <div class="coupon">
+            <div class="details">
+                <h4>30% Off on Kitchenware</h4>
+                <p>Upgrade your kitchen with 30% off on select products.</p>
+            </div>
+            <div class="copy">
+                <button onclick="copyCouponCode(this, 'KITCHEN30')">Copy Code</button>
+                <div class="copied-message">Code Copied!</div>
+            </div>
+        </div>
+
+        <div class="coupon">
+            <div class="details">
+                <h4>25% Off on Beauty Products</h4>
+                <p>Pamper yourself with 25% off on beauty and skincare products.</p>
+            </div>
+            <div class="copy">
+                <button onclick="copyCouponCode(this, 'BEAUTY25')">Copy Code</button>
+                <div class="copied-message">Code Copied!</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
